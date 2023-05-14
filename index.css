@@ -52,6 +52,7 @@ header {
 nav {
   max-width: 16%;
   height: 100%;
+  top: 0;
   text-align: center;
   position: fixed;
   background-color: var(--bs-gray-200);
@@ -78,26 +79,27 @@ nav ul li {
 
 /* ẢNH CV*/
 .img-info {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
 .information {
-  max-width: 100%;
-  font-weight: bold;
-  font-size: xx-large;
-  font-style: italic;
-  top: 0;
-  right: 0;
+  width: 80%;
+  margin: 0 auto;
   background-color: var(--bs-gray-500);
-  margin: 0px 30px;
-  padding: 10px 10px;
   border: 1px dotted brown;
   border-radius: 20px;
+}
+.information a {
+  font-size: small;
 }
 
 .icon-small {
   font-size: 25px;
+}
+
+hr {
+  width: 112%;
 }
 
 /* CONTENTS CONTAINER */
