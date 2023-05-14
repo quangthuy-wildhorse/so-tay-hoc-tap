@@ -1,0 +1,169 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    line-height: 1.8;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url(https://wallpaperaccess.com/download/background-187161);
+}
+
+.cv-document {
+	box-sizing: border-box;
+	border: none;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-family: arial, sans-serif, tahoma;
+	font-size: 10pt;
+}
+
+.cv-page {
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    text-decoration: none;
+    width: 900px;
+    min-height: 900px;
+    margin: 0 auto;
+    box-shadow: 0 0 1px rgba(0,0,0,.5);
+    background-color: #ffffffe7;
+    position: relative;
+
+    padding: 40px;
+    padding-left:100px
+}
+
+.section{
+    margin-bottom: 40px;
+    margin-top: 15px;
+}
+
+.section-content{
+    margin-top: 15px;
+}
+
+#name{
+    color: #0e2452;
+    text-transform: uppercase;
+    font-size: xx-large;
+}
+
+.section-title{
+    position:relative;
+    font-size: xx-large;
+    margin-bottom: 0;
+    border-bottom: 2px solid black ;
+}
+
+.info-img{
+    height: 200px;
+    width: auto;
+    top: 73px;
+    right: 200px;
+    position:absolute;
+    border-style: groove;
+}
+
+.info{
+    font-weight: bolder;
+    width: 100px;
+    display: inline-block;
+}
+
+.like{
+    font-weight: bold;
+    font-size: 15px;
+    font-style: italic;
+    margin: 12px 12px;
+}
+
+.like-list{
+    list-style: circle;
+margin: 5px 5px;
+color: rgb(137, 26, 26);
+}
+
+.info-1{
+    font-weight: bold;
+    padding-left: 40px;
+    font-size: large;
+}
+
+a:link{
+    text-decoration-line: none;
+}
+/* tạo lớp giả để tạo hiệu ứng với link */
+a:hover{
+    color: green;
+    font-size: larger;
+}
+
+a:visited{
+    color: red;
+}
+
+
+.row{
+    position: relative;
+    margin: 10px 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #d0d0d0;
+}
+/* Lớp giả để tạo chấm tròn các row: 3 điều kiện cần-có */
+.row::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* lớp giả để tạo chấm tròn nối các mốc thời gian */
+.row::before{
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+    top: 15px;
+    left: -26px;
+}
+
+.left{
+    width: 40%;
+    display: block;
+    float: left;
+}
+.right{
+    width: 60%;
+    display: block;
+    float: left;
+}
+
+/* kẻ đường line theo chiều dọc để xuyên qua điểm đã tạo ở trên */
+.section-content.timeline{
+    position: relative;
+}
+.section-content.timeline::after{
+    position: absolute;
+    content: '';
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+}
+
+footer{
+  font-size: 16px;
+  font-style: italic;
+  margin: auto;
+  color: rgb(73, 245, 73);
+  width: 900px;
+}
