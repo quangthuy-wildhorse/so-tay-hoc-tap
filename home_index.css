@@ -1,0 +1,18 @@
+.row {
+  border-radius: 30px;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+@media screen and (max-width: 600px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  svg,
+  .btn {
+    margin: 30px;
+  }
+}
