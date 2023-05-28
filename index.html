@@ -1278,6 +1278,75 @@
             </ul>
           </div>
 
+          <div class="row">
+            <li>
+              <p>
+                <b>Đôi điều về thuộc tính <code>z-index:</code></b>
+              </p>
+            </li>
+            <ul>
+              <li>
+                Định nghĩa: là thuộc tính tạo chiều sâu (chiều thứ 3), quyết
+                định element nào nằm trên element nào.
+              </li>
+              <li>
+                Trong cùng 1 parent element, nếu phần tử con nào được đặt thuộc
+                tính <code>position: relative</code> thì sẽ nằm đè lên trên.
+                <u> (VD 6.1)</u>
+              </li>
+              <li>
+                Khi khác parent element: khi phần tử cha nào có chỉ số
+                <code>z-index</code> lớn hơn thì các phần tử con của nó sẽ được
+                ưu tiên thuộc tính của phần tử cha. Dù rằng phần tử con
+                <i>(của phần tử cha có chỉ số <code>z-index</code> nhỏ hơn)</i>
+                có giá trị lớn hơn so với phần tử cha có chỉ số
+                <code>z-index</code> lớn hơn. <u> (VD 6.2)</u>
+              </li>
+            </ul>
+            <div class="ex-6">
+              <div class="ex_6-1">
+                <div class="color_ex color_red"></div>
+                <div class="color_ex color_blue"></div>
+                <div class="color_ex color_orange"></div>
+                <p><u>VD 6.1</u></p>
+              </div>
+            </div>
+
+            <div class="ex-6">
+              <div class="ex_6-1">
+                <div class="color_ex color_red"></div>
+                <div class="color_ex color_blue"></div>
+                <div class="color_ex color_orange"></div>
+              </div>
+              <div class="ex_6-2">
+                <div class="color_ex color_gray"></div>
+              </div>
+              <p>
+                <u>VD 6.2:</u> <code>z-index</code> của phần tử màu xanh dương
+                là 100, của màu ghi là 10, của div cha màu xanh dương là 10, div
+                cha màu ghi là 20. Như vậy có thể hiểu như sau:
+                <div style="padding-left: 50px;
+                width: 500px; background-color: rgba(178, 168, 168, 0.422);">
+                <code>
+                  .ex_6-1 {<br />
+                      position: relative; <br />
+                      z-index: 10;<br />
+                  } <br />.color_blue {<br />
+                  z-index: 100; /* được hiểu giá trị là 10.100*/ <br />
+                  } <br /><br />
+                  .ex_6-2 { <br />
+                  position: relative; <br />
+                  z-index: 20; <br />
+                  } <br />
+                  .color_gray { <br />
+                  z-index: 10; /* được hiểu giá trị là 20.10*/ <br />
+                  }
+                </code>
+              </div>
+              </p>
+            </div>
+          </div>
+
           <!-- So sánh FLOAT VÀ FLEX -->
           <div class="row">
             <li class="LIKEN">
